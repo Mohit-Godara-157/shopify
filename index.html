@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+      .wrapper {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        max-width: 100% !important;
+      }
+      .rte h4 {
+        margin-bottom: 0 !important;
+      }
+      .rte h3 {
+        text-align: start !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .rte h1,
+      h2 {
+        margin: 0 !important;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+      .ff_poppin {
+        font-family: "poppins";
+      }
+      .container {
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .d-flex {
+        display: flex;
+      }
+      .d-none {
+        display: none;
+      }
+      .d-block {
+        display: block;
+      }
+      .col-6 {
+        width: 50%;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .col-4 {
+        width: 33.33%;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .col-5 {
+        width: 43%;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .gap-10 {
+        gap: 10px;
+      }
+      .text_align_start {
+        text-align: start !important;
+      }
+      .align-items-center {
+        align-items: center;
+      }
+      .justify-contnet-between {
+        justify-content: space-between;
+      }
+      .justify-contnet-center {
+        justify-content: center;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .pointer-cursour {
+        cursor: pointer !important;
+      }
+
+      .flex-column {
+        flex-direction: column;
+      }
+
+      /* font */
+      .fs-xl {
+        font-size: 25px;
+        line-height: 44px;
+      }
+      .fs-xxl {
+        font-size: 28px;
+        line-height: 35px;
+      }
+      .fs-2md {
+        font-size: 25px;
+        line-height: 33px;
+      }
+      .fs-md {
+        font-size: 25px;
+        line-height: 35px;
+      }
+      .fs-2sm {
+        font-size: 22px;
+        line-height: 28px;
+      }
+      .fs-sm {
+        font-size: 14px;
+        line-height: 21px;
+      }
+      .fs-xsm {
+        font-size: 14px;
+        line-height: 21px;
+      }
+      .fs-2xsm {
+        font-size: 20px;
+        line-height: 26px;
+      }
+      .fw-normal {
+        font-weight: 400;
+      }
+      .fw-medium {
+        font-weight: 500;
+      }
+      .fw-bold {
+        font-weight: 700;
+      }
+      .fw-semibold {
+        font-weight: 600;
+      }
+      .fw-extrabold {
+        font-weight: 800;
+      }
+      /* width */
+      .image-center {
+        max-width: 70% !important;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .small-image-width {
+        max-width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .slider-image-center {
+        max-width: 64%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .w-40 {
+        width: 40px;
+      }
+      .w-100 {
+        width: 100%;
+      }
+      /* padding margin */
+      .p-2 {
+        padding: 4px;
+      }
+      .pt-50 {
+        padding-top: 50px;
+      }
+      .pt-10 {
+        padding-top: 10px;
+      }
+      .pt-40 {
+        padding-top: 40px;
+      }
+      .pt-35 {
+        padding-top: 35px;
+      }
+      .pt-30 {
+        padding-top: 30px;
+      }
+      .pt-80 {
+        padding-top: 80px;
+      }
+      .mt-29 {
+        margin-top: 29px;
+      }
+      .mt-30 {
+        margin-top: 30px;
+      }
+      .mt-35 {
+        margin-top: 35px;
+      }
+      .pb-80 {
+        padding-bottom: 80px;
+      }
+      .pt-20 {
+        padding-top: 20px !important;
+      }
+      .pt-60 {
+        padding-top: 60px;
+      }
+      .pb-40 {
+        padding-bottom: 40px;
+      }
+      .pb-60 {
+        padding-bottom: 60px;
+      }
+      .pb-65 {
+        padding-bottom: 65px;
+      }
+      .mt-42 {
+        margin-top: 42px;
+      }
+      .mt-15 {
+        margin-top: 15px;
+      }
+      .mb-10 {
+        margin-bottom: 10px !important;
+      }
+      .mt-10 {
+        margin-top: 10px;
+      }
+      .mt-20 {
+        margin-top: 20px !important;
+      }
+      .mt-92 {
+        margin-top: 72px !important;
+      }
+      .py-10 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      /* background */
+      .bg-white {
+        background: white;
+      }
+      .text-xsm-2727 {
+        color: #272727 !important;
+      }
+      .text-gridient {
+        background: linear-gradient(#e43694, #902e66);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .text-purple {
+        color: #e43694 !important;
+      }
+      .text-white {
+        color: white !important;
+      }
+      .text-white-80 {
+        color: white !important;
+        opacity: 80% !important;
+      }
+      .bg-efef {
+        background: #efefef;
+      }
+      .bg-white-gridient {
+        background-image: linear-gradient(#efefef, #ffffff);
+      }
+      .bg-btn-gridient {
+        background-image: linear-gradient(#e43694, #902e66);
+      }
+      .bg-box-gridient {
+        background-image: linear-gradient(#4c0d31, #13000a);
+      }
+      .bg-main-gridient {
+        background-image: linear-gradient(black 93%, #2e0d31);
+      }
+      .bg-section-gridient {
+        background-image: linear-gradient(180deg, #2e0d31 -120%, #000000 90%);
+      }
+      /* position */
+      .position-relative {
+        position: relative;
+      }
+      .position-image-absolute {
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+      }
+      /* image border normal */
+
+      .circle {
+        border: 1.5px solid #463d42 !important;
+        border-radius: 50px;
+      }
+      .active {
+        border: 1.5px solid white !important;
+      }
+      /* other */
+      .transition-image {
+        transition: 1s ease-in-out !important;
+      }
+      .br-35 {
+        border-radius: 35px;
+      }
+
+      .mw-600 {
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .text-decoration-center {
+        text-decoration: line-through;
+      }
+      .btn-edit {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+      .b-radius-rounded {
+        border-radius: 30px;
+      }
+      .border-0 {
+        border: 0;
+      }
+
+      .card {
+        padding: 32px 0;
+        border: 1px solid #b8b8b8;
+        background-color: white;
+        border-radius: 24px;
+        margin-left: 25px !important;
+        margin-right: 25px !important;
+      }
+
+      /* slider dots */
+      .slick-dots li.slick-active button:before {
+        opacity: 1 !important;
+        width: 15px !important;
+        height: 15px !important;
+        background: #e43694 !important;
+      }
+      .slick-slider .slick-dots li button:before,
+      .slick-slider .slick-dots li a:before {
+        border: 0 !important;
+        margin: 0.25rem 0 0 0.3rem !important;
+      }
+      .slick-dots li button:before {
+        font-family: slick;
+        position: absolute;
+        top: 40px !important;
+        width: 15px !important;
+        height: 15px !important;
+        content: "" !important;
+        background: #c9c9c9 !important;
+        opacity: 0.25;
+        border-radius: 50% !important;
+        color: #000;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .slick-slider .slick-dots {
+        bottom: -15px !important;
+      }
+      @media (max-width: 992px) {
+        .mt-92 {
+          margin-top: 92px !important;
+        }
+      }
+      @media (max-width: 781px) {
+        .col-md-12 {
+          width: 100%;
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+        .col-md-6 {
+          width: 50%;
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+        .fs-2md {
+          font-size: 40px;
+          line-height: 46px;
+        }
+        .fs-xxl {
+          font-size: 40px;
+          line-height: 46px;
+        }
+        .fs-xsm-xl {
+          font-size: 40px !important;
+          line-height: 46px !important;
+        }
+
+        .fs-xl {
+          font-size: 45px;
+          line-height: 57px;
+        }
+        .fs-md {
+          font-size: 48px;
+          line-height: 55px;
+        }
+        .fs-xsm {
+          font-size: 25px;
+          line-height: 36px;
+        }
+        .fs-sm {
+          font-size: 25px;
+        }
+        .fs-2sm {
+          font-size: 25px;
+        }
+        .image-center {
+          max-width: 100% !important;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .small-image-width {
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .slider-image-center {
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .w-40 {
+          width: 30px;
+        }
+        .mt-92 {
+          margin-top: 30px !important;
+        }
+        .mt-40-md {
+          margin-top: 40px !important;
+        }
+        .mt-md-15 {
+          margin-top: 15px !important;
+        }
+        .pt-md-20 {
+          padding-top: 20px !important;
+        }
+        .mw-md-200 {
+          max-width: 70%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .card {
+          padding: 18px 0;
+          margin-left: 5px !important;
+          margin-right: 5px !important;
+        }
+        .position-image-absolute {
+          right: 10px !important;
+        }
+      }
+      @media (max-width: 576px) {
+        .mx-xsm-12 {
+          margin-left: 12px !important;
+          margin-right: 12px !important;
+        }
+        .mt-md-15 {
+          margin-top: 0px !important;
+        }
+        .mt-10-xsm {
+          margin-top: 10px !important;
+        }
+        .mt-50-xsm {
+          margin-top: 50px !important;
+        }
+        .px-xsm-12 {
+          padding-left: 12px !important;
+          padding-right: 12px !important;
+        }
+        .pt-15-xsm {
+          padding-top: 25px !important;
+        }
+        .px-xsm-0 {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        .line-height-xsm-1 {
+          line-height: 1.2em !important;
+        }
+        .small-image-width {
+          max-width: 40%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .fs-xsm-xl {
+          font-size: 23px !important;
+          line-height: 34px !important;
+        }
+        .fs-2md {
+          font-size: 25px;
+          line-height: 30px;
+        }
+        .fs-xxl {
+          font-size: 25px;
+          line-height: 30px;
+        }
+        .fs-xl {
+          font-size: 22px;
+          letter-spacing: -0.5px;
+        }
+        .fs-md {
+          font-size: 25px;
+          line-height: 34px;
+        }
+        .fs-xsm {
+          font-size: 14px;
+          line-height: 21px;
+        }
+        .fs-sm {
+          font-size: 14px;
+          line-height: 19px;
+        }
+        .fs-2sm {
+          font-size: 14px;
+          line-height: 19px;
+        }
+        .fs-xsm-small {
+          font-size: 15px !important;
+          line-height: 19px;
+        }
+        .fs-2xsm {
+          font-size: 17px;
+          line-height: 23px;
+        }
+        .slick-dots li.slick-active button:before {
+          width: 7px !important;
+          height: 7px !important;
+        }
+        .slick-dots li button:before {
+          width: 7px !important;
+          height: 7px !important;
+        }
+        .bg-section-gridient-xsm {
+          background-image: linear-gradient(180deg, #2e0d31 -80%, #000000 90%);
+        }
+        .mt-42 {
+          margin-top: 30px;
+        }
+        .mt-92 {
+          margin-top: 25px !important;
+        }
+        .pt-35 {
+          padding-top: 20px;
+        }
+        .pt-md-20 {
+          padding-top: 0px !important;
+        }
+        .pt-50 {
+          padding-top: 40px;
+        }
+        .pb-40 {
+          padding-bottom: 30px;
+        }
+        .pt-40 {
+          padding-top: 30px;
+        }
+        .pt-80 {
+          padding-top: 50px;
+        }
+        .mt-30 {
+          margin-top: 25px;
+        }
+        .pb-100 {
+          padding-bottom: 50px;
+        }
+        .pt-20 {
+          padding-top: 10px !important;
+        }
+        .pt-60 {
+          padding-top: 30px;
+        }
+        .pb-80 {
+          padding-bottom: 60px;
+        }
+        .pb-xsm-50 {
+          padding-bottom: 50px !important;
+        }
+        .pb-65 {
+          padding-bottom: 40px;
+        }
+        .pb-xsm-0 {
+          padding-bottom: 0 !important;
+        }
+        .bg-efef-xsm {
+          background: #efefef;
+        }
+        .pb-xsm-60 {
+          padding-bottom: 40px;
+        }
+        .p-2 {
+          padding: 1.2px;
+        }
+        .bg-xsm-white {
+          background: white !important;
+        }
+      }
+      @media (min-width: 781px) {
+        .height-495 {
+          height: 510px;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="text_align_start bg-main-gridient pt-35">
+      <div class="container position-relative">
+        <h2 class="ff_poppin fs-xl text-gridient fw-extrabold text-center">
+          Dyson Supersonic
+        </h2>
+        <h1
+          class="text-white fs-xsm-xl ff_poppin fs-xxl pt-md-20 fw-semibold text-center"
+        >
+          L’indiensablepours’apprêter <span class="d-block">au quotidien</span>
+        </h1>
+        <div>
+          <img
+            class="image-center pt-20 d-flex"
+            id="images"
+            src=""
+            alt="main-image"
+          />
+        </div>
+
+        <div class="d-flex gap-10 position-image-absolute">
+          <div
+            class="p-2 d-flex justify-contnet-center align-items-center active circle"
+          >
+            <img
+              class="pointer-cursour w-40 change1"
+              id="change1"
+              src="https://www.baneo-store.com/cdn/shop/files/COLOR2_1_2e1d506b-0b51-4c9d-ae69-36a056c1df42.png?v=1695133265"
+              alt="small image"
+            />
+          </div>
+          <div
+            class="p-2 d-flex justify-contnet-center align-items-center circle"
+          >
+            <img
+              class="pointer-cursour w-40"
+              id="change2"
+              src="https://www.baneo-store.com/cdn/shop/files/COLOR2_cf41802c-485c-4beb-a40a-d894466c06c2.png?v=1695133325"
+              alt="small image"
+            />
+          </div>
+          <div
+            class="p-2 d-flex justify-contnet-center align-items-center circle"
+          >
+            <img
+              class="pointer-cursour w-40"
+              id="change3"
+              src="https://www.baneo-store.com/cdn/shop/files/COLOR1_c8296cff-d992-4b8b-a566-41368f9a2c15.png?v=1695133208"
+              alt="small image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="text_align_start bg-white-gridient bg-xsm-white pb-80 pb-xsm-0 pt-40"
+    >
+      <div class="container px-xsm-0">
+        <div class="row justify-contnet-between">
+          <div
+            class="col-5 height-495 d-flex flex-column justify-contnet-between col-md-12"
+          >
+            <div>
+              <h3 class="fs-md ff_poppin fw-bold">
+                Joysticks et pavé tactile haute précision.
+              </h3>
+              <p class="ff_poppin fw-normal pt-10 fs-xsm">
+                Grâce au pavé tactile, aux joysticks analogique et aux gâchettes
+                plus précise. Obtenez un meilleur contrôle en jeu et une
+                précision inégalable. Ajoutezà cela des détecteurs de mouvement
+                avancées, plus sensible et précis qu' aucune autre manette, elle
+                détectera chacune de vos inclinaisons et rotations sans aucun
+                problème.
+              </p>
+            </div>
+            <img
+              class="w-100 mt-md-15"
+              src="https://www.baneo-store.com/cdn/shop/files/white-image.png?v=1695131443"
+              alt=" white image"
+            />
+          </div>
+          <div
+            class="col-5 height-495 d-flex flex-column justify-contnet-between bg-efef-xsm pb-xsm-60 pt-15-xsm col-md-12 mt-40-md"
+          >
+            <div>
+              <h3 class="fs-md ff_poppin fw-bold">
+                Plus puissant qu’aucun autre sèche cheveux.
+              </h3>
+              <p class="ff_poppin fw-normal pt-10 fs-xsm">
+                Grâce au pavé tactile, aux joysticks analogique et aux gâchettes
+                plus précise. Obtenez un meilleur contrôle en jeu et une
+                précision inégalable. Ajoutezà cela des détecteurs de mouvement
+              </p>
+            </div>
+            <img
+              class="w-100 mt-md-15"
+              src="https://www.baneo-store.com/cdn/shop/files/white-image.png?v=1695131443"
+              alt=" white image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 6image section -->
+    <section class="text_align_start bg-section-gridient pt-80 pb-80 pb-xsm-50">
+      <div class="container px-xsm-0">
+        <div class="bg-box-gridient pt-40 pb-40 br-35 mx-xsm-12">
+          <h4
+            class="fs-md mw-md-200 ff_poppin text-white text-center fw-semibold line-height-xsm-1"
+          >
+            Tout ça réuni en un seul Dyson.
+          </h4>
+          <div class="mw-600">
+            <div class="row mt-42">
+              <div class="col-4 col-md-6">
+                <img
+                  class="small-image-width d-flex"
+                  src="https://www.baneo-store.com/cdn/shop/files/lady-image.png?v=1695131515"
+                  alt="image"
+                />
+                <p
+                  class="ff_poppin fs-sm text-center text-white fw-medium mt-10"
+                >
+                  Haute efficacité
+                </p>
+              </div>
+              <div class="col-4 col-md-6">
+                <img
+                  class="small-image-width d-flex"
+                  src="https://www.baneo-store.com/cdn/shop/files/lady-image.png?v=1695131515"
+                  alt="image"
+                />
+                <p
+                  class="ff_poppin fs-sm text-center text-white fw-medium mt-10"
+                >
+                  Design léger <br />& compact
+                </p>
+              </div>
+              <div class="col-4 col-md-6 mt-40-md mt-10-xsm">
+                <img
+                  class="small-image-width d-flex"
+                  src="https://www.baneo-store.com/cdn/shop/files/lady-image.png?v=1695131515"
+                  alt="image"
+                />
+                <p
+                  class="ff_poppin text-center text-white fw-medium mt-10 fs-sm"
+                >
+                  Haute efficacité
+                </p>
+              </div>
+              <div class="col-4 col-md-6 mt-20 mt-40-md mt-10-xsm">
+                <img
+                  class="small-image-width d-flex"
+                  src="https://www.baneo-store.com/cdn/shop/files/lady-image.png?v=1695131515"
+                  alt="image"
+                />
+                <p
+                  class="ff_poppin text-center text-white fw-medium mt-10 fs-sm"
+                >
+                  Haute efficacité
+                </p>
+              </div>
+              <div class="col-4 col-md-6 mt-20 mt-40-md mt-10-xsm">
+                <img
+                  class="small-image-width d-flex"
+                  src="https://www.baneo-store.com/cdn/shop/files/lady-image.png?v=1695131515"
+                  alt="image"
+                />
+                <p
+                  class="ff_poppin fs-sm text-center text-white fw-medium mt-10"
+                >
+                  Design léger <br />
+                  & compact
+                </p>
+              </div>
+              <div class="col-4 col-md-6 mt-20 mt-40-md mt-10-xsm">
+                <img
+                  class="small-image-width d-flex"
+                  src="https://www.baneo-store.com/cdn/shop/files/lady-image.png?v=1695131515"
+                  alt="image"
+                />
+                <p
+                  class="ff_poppin fs-sm text-center text-white fw-medium mt-10"
+                >
+                  Haute efficacité
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row pt-60 justify-contnet-between">
+          <div class="col-5 mx-xsm-0 col-md-12">
+            <h3 class="fs-md text-white ff_poppin fw-semibold">
+              Joysticks et pavé tactile haute précision.
+            </h3>
+            <p class="ff_poppin text-white-80 fw-normal mt-10 fs-xsm">
+              Grâce au pavé tactile, aux joysticks analogique et aux gâchettes
+              plus précise. Obtenez un meilleur contrôle en jeu et une précision
+              inégalable. Ajoutezà cela des détecteurs de mouvement avancées,
+              plus sensible et précis qu' aucune autre manette, elle détectera
+              chacune de vos inclinaisons et rotations sans aucun problème.
+            </p>
+            <img
+              class="w-100 mt-30"
+              src="https://www.baneo-store.com/cdn/shop/files/white-image.png?v=1695131443"
+              alt=" white image"
+            />
+          </div>
+          <div
+            class="col-5 mt-50-xsm pt-15-xsm bg-section-gridient-xsm col-md-12 mt-40-md"
+          >
+            <h3 class="fs-md text-white ff_poppin fw-semibold">
+              Joysticks et pavé tactile haute précision.
+            </h3>
+            <p class="ff_poppin text-white-80 fw-normal mt-10 fs-xsm">
+              Grâce au pavé tactile, aux joysticks analogique et aux gâchettes
+              plus précise. Obtenez un meilleur contrôle en jeu et une précision
+              inégalable. Ajoutezà cela des détecteurs de mouvement avancées,
+              plus sensible et précis qu' aucune autre manette, elle détectera
+              chacune de vos inclinaisons et rotations sans aucun problème.
+            </p>
+            <img
+              class="w-100 mt-30"
+              src="https://www.baneo-store.com/cdn/shop/files/white-image.png?v=1695131443"
+              alt=" white image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <section class="text_align_start pb-80 pt-40 bg-efef">
+      <div class="container">
+        <h2 class="ff_poppin fw-extrabold line-height-xsm-1 fs-2md text-center">
+          Découvrez nos autres <span class="d-block">produits</span>
+        </h2>
+        <div class="pt-40 slider mb-10">
+          <div class="card">
+            <img
+              class="slider-image-center d-flex"
+              src="https://www.baneo-store.com/cdn/shop/files/PRODUCT.jpg?v=1695132979"
+              alt="image"
+            />
+            <h2
+              class="py-10 fs-xsm-small line-height-xsm-1 text-xsm-2727 ff_poppin fw-semibold fs-2sm text-center mt-10"
+            >
+              Dyson Supersonic
+            </h2>
+            <div
+              class="d-flex gap-10 align-items-center justify-contnet-center"
+            >
+              <h3
+                class="fs-xsm-small ff_poppin fw-medium text-decoration-center fs-2sm text-center mt-10"
+              >
+                279,90€
+              </h3>
+              <h3
+                class="fs-xsm-small ff_poppin fw-semibold fs-2sm text-center text-purple mt-10"
+              >
+                159,90€
+              </h3>
+            </div>
+            <div class="d-flex justify-contnet-center mt-15">
+              <a
+                class="pointer-cursour ff_poppin fw-semibold fs-2xsm bg-btn-gridient border-0 btn-edit b-radius-rounded text-white"
+                href="https://www.baneo-store.com/www.amazon.fr"
+              >
+                Découvrir</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="slider-image-center d-flex"
+              src="https://www.baneo-store.com/cdn/shop/files/PRODUCT.jpg?v=1695132979"
+              alt="image"
+            />
+            <h2
+              class="py-10 fs-xsm-small line-height-xsm-1 text-xsm-2727 ff_poppin fw-semibold fs-2sm text-center mt-10"
+            >
+              Dyson Supersonic
+            </h2>
+            <div
+              class="d-flex gap-10 align-items-center justify-contnet-center"
+            >
+              <h3
+                class="fs-xsm-small ff_poppin fw-medium text-decoration-center fs-2sm text-center mt-10"
+              >
+                279,90€
+              </h3>
+              <h3
+                class="fs-xsm-small ff_poppin fw-semibold fs-2sm text-center text-purple mt-10"
+              >
+                159,90€
+              </h3>
+            </div>
+            <div class="d-flex justify-contnet-center mt-15">
+              <a
+                class="pointer-cursour ff_poppin fw-semibold fs-2xsm bg-btn-gridient border-0 btn-edit b-radius-rounded text-white"
+                href="https://www.baneo-store.com/www.amazon.fr"
+              >
+                Découvrir</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="slider-image-center d-flex"
+              src="https://www.baneo-store.com/cdn/shop/files/PRODUCT.jpg?v=1695132979"
+              alt="image"
+            />
+            <h2
+              class="py-10 fs-xsm-small line-height-xsm-1 text-xsm-2727 ff_poppin fw-semibold fs-2sm text-center mt-10"
+            >
+              Dyson Supersonic
+            </h2>
+            <div
+              class="d-flex gap-10 align-items-center justify-contnet-center"
+            >
+              <h3
+                class="fs-xsm-small ff_poppin fw-medium text-decoration-center fs-2sm text-center mt-10"
+              >
+                279,90€
+              </h3>
+              <h3
+                class="fs-xsm-small ff_poppin fw-semibold fs-2sm text-center text-purple mt-10"
+              >
+                159,90€
+              </h3>
+            </div>
+            <div class="d-flex justify-contnet-center mt-15">
+              <a
+                class="pointer-cursour ff_poppin fw-semibold fs-2xsm bg-btn-gridient border-0 btn-edit b-radius-rounded text-white"
+                href="https://www.baneo-store.com/www.amazon.fr"
+              >
+                Découvrir</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="slider-image-center d-flex"
+              src="https://www.baneo-store.com/cdn/shop/files/PRODUCT.jpg?v=1695132979"
+              alt="image"
+            />
+            <h2
+              class="py-10 fs-xsm-small line-height-xsm-1 text-xsm-2727 ff_poppin fw-semibold fs-2sm text-center mt-10"
+            >
+              Dyson Supersonic
+            </h2>
+            <div
+              class="d-flex gap-10 align-items-center justify-contnet-center"
+            >
+              <h3
+                class="fs-xsm-small ff_poppin fw-medium text-decoration-center fs-2sm text-center mt-10"
+              >
+                279,90€
+              </h3>
+              <h3
+                class="fs-xsm-small ff_poppin fw-semibold fs-2sm text-center text-purple mt-10"
+              >
+                159,90€
+              </h3>
+            </div>
+            <div class="d-flex justify-contnet-center mt-15">
+              <a
+                class="pointer-cursour ff_poppin fw-semibold fs-2xsm bg-btn-gridient border-0 btn-edit b-radius-rounded text-white"
+                href="https://www.baneo-store.com/www.amazon.fr"
+              >
+                Découvrir</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".slider").slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
+          },
+        ],
+      });
+
+      let imgs = document.getElementById("images");
+      let change1 = document.getElementById("change1");
+      let change2 = document.getElementById("change2");
+      let change3 = document.getElementById("change3");
+
+      change1.addEventListener("click", () => {
+        setTimeout(() => {
+          imgs.src =
+            "https://www.baneo-store.com/cdn/shop/files/PRINCIPALE1.png?v=1695131206";
+        }, 500);
+      });
+      change2.addEventListener("click", () => {
+        setTimeout(() => {
+          imgs.src =
+            "https://www.baneo-store.com/cdn/shop/files/PRINCIPALE3.png?v=1695131219";
+        }, 500);
+      });
+      change3.addEventListener("click", () => {
+        setTimeout(() => {
+          imgs.src =
+            "https://www.baneo-store.com/cdn/shop/files/PRINCIPALE2.png?v=1695131211";
+        }, 500);
+      });
+      document.body.querySelector(".change1").click();
+      $(".circle").click(function (e) {
+        $(".circle").removeClass("active");
+        $(this).addClass("active");
+      });
+    </script>
+  </body>
+</html>

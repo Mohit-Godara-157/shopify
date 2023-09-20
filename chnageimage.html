@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        border: 0px;
+        width: 62px;
+        height: 62px;
+        border-radius: 100%;
+      }
+      #bt1 {
+        background-color: #77545a;
+      }
+      #bt2 {
+        background-color: #fff;
+        border: 2px solid grey;
+      }
+      #bt3 {
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>On Click Image Change</title>
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+        <img
+          id="show-image"
+          src="https://m.media-amazon.com/images/I/71018KeTu6L._SX569_.jpg"
+          alt="dummy"
+          width="500px"
+        />
+        <br />
+        <button
+          id="bt1"
+          onclick="document.getElementById('show-image').src='https://m.media-amazon.com/images/I/71018KeTu6L._SX569_.jpg'"
+        ></button>
+        <button
+          id="bt2"
+          onclick="document.getElementById('show-image').src='https://m.media-amazon.com/images/I/71OjU53yorL._SX569_.jpg'"
+        ></button>
+        <button
+          id="bt3"
+          onclick="document.getElementById('show-image').src='https://m.media-amazon.com/images/I/719R2hhUGFL._SX569_.jpg'"
+        ></button>
+      </body>
+    </html>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+      .align--top-middle {
+        text-align: start !important;
+      }
+      .wrapper {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        max-width: 100% !important;
+      }
+      .rte h3 {
+        text-align: start !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .rte h1,
+      h2 {
+        margin: 0 !important;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+      .ff_poppin {
+        font-family: "poppins";
+      }
+      .container {
+        max-width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .d-flex {
+        display: flex;
+      }
+      .d-none {
+        display: none;
+      }
+      .d-block {
+        display: block;
+      }
+      .col-6 {
+        width: 50%;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .col-4 {
+        width: 33.33%;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .col-5 {
+        width: 43%;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .gap-10 {
+        gap: 10px;
+      }
+      .align-items-center {
+        align-items: center;
+      }
+      .justify-contnet-between {
+        justify-content: space-between;
+      }
+      .justify-contnet-center {
+        justify-content: center;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .pointer-cursour {
+        cursor: pointer;
+      }
+
+      /* font */
+      .fs-35 {
+        font-size: 35px;
+      }
+      .fs-25 {
+        font-size: 25px;
+      }
+      .fs-30 {
+        font-size: 30px;
+      }
+      .fs-40 {
+        font-size: 40px;
+      }
+      .fs-16 {
+        font-size: 16px;
+      }
+      .fs-18 {
+        font-size: 18px;
+      }
+      .fs-20 {
+        font-size: 20px;
+      }
+      .fw-normal {
+        font-weight: 400;
+      }
+      .fw-medium {
+        font-weight: 500;
+      }
+      .fw-bold {
+        font-weight: 700;
+      }
+      /* width */
+      .image-center {
+        max-width: 70% !important;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .small-image-width {
+        max-width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .slider-image-center {
+        max-width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .w-40 {
+        width: 40px;
+      }
+      .w-100 {
+        width: 100%;
+      }
+      /* padding margin */
+      .pt-40 {
+        padding-top: 40px;
+      }
+      .pb-75 {
+        padding-bottom: 1px;
+      }
+      .pt-20 {
+        padding-top: 20px;
+      }
+      .pt-17 {
+        padding-top: 17px;
+      }
+      .pt-60 {
+        padding-top: 60px;
+      }
+      .pb-60 {
+        padding-bottom: 60px;
+      }
+      .mt-15 {
+        margin-top: 15px;
+      }
+      .mt-10 {
+        margin-top: 10px;
+      }
+      .mt-30 {
+        margin-top: 30px;
+      }
+      .mt-50 {
+        margin-top: 50px;
+      }
+      .mt-20 {
+        margin-top: 20px !important;
+      }
+      .mt-92 {
+        margin-top: 100px !important;
+      }
+      .p-10 {
+        padding: 10px;
+      }
+      .py-35 {
+        padding-top: 35px;
+        padding-bottom: 35px;
+      }
+      .py-10 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      /* background */
+      .text-purple {
+        color: #800080ef !important;
+      }
+      .text-white {
+        color: white !important;
+      }
+      .bg-black {
+        background-color: black;
+      }
+      .bg-purple {
+        background-color: #800080c8;
+      }
+      /* position */
+      .position-relative {
+        position: relative;
+      }
+      .position-image-absolute {
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+      }
+
+      /* other */
+      .br-35 {
+        border-radius: 35px;
+      }
+      .mw-600 {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .text-decoration-center {
+        text-decoration: line-through;
+      }
+      .btn-edit {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+      .b-radius-rounded {
+        border-radius: 30px;
+      }
+      .border-0 {
+        border: 0;
+      }
+
+      /* slider dots */
+      .slick-dots li.slick-active button:before {
+        opacity: 0.75;
+        width: 14px !important;
+        height: 14px !important;
+        background: #800080ef !important;
+      }
+      .slick-dots li button:before {
+        font-family: slick;
+        position: absolute;
+        top: 60px !important;
+        width: 14px !important;
+        height: 14px !important;
+        content: "" !important;
+        background: #524f52ef !important;
+
+        opacity: 0.25;
+        border-radius: 50% !important;
+        color: #000;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      @media (max-width: 1024px) {
+        .col-md-12 {
+          width: 100%;
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+        .col-md-6 {
+          width: 50%;
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+        .fs-35 {
+          font-size: 22px;
+        }
+        .fs-25 {
+          font-size: 21px;
+        }
+        .fs-30 {
+          font-size: 20px;
+        }
+
+        .fs-16 {
+          font-size: 14px;
+        }
+        .fs-18 {
+          font-size: 16px;
+        }
+        .fs-20 {
+          font-size: 17px;
+        }
+        .image-center {
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .small-image-width {
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .slider-image-center {
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .w-40 {
+          width: 30px;
+        }
+        .mt-92 {
+          margin-top: 40px !important;
+        }
+        .mt-30-md {
+          margin-top: 30px;
+        }
+        .mw-md-200 {
+          max-width: 200px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      /* image border normal */
+      .circle {
+        border: 2px solid red;
+        border-radius: 50px;
+      }
+      .active {
+        border: 2px solid white;
+      }
+
+      /* image border */
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="bg-black pt-40">
+      <div class="container position-relative">
+        <h2 class="ff_poppin text-purple fw-bold fs-35 text-center">
+          Dyson Supersonic
+        </h2>
+        <h1
+          class="text-white ff_poppin fs-35 mt-15 pt-40 fw-medium text-center"
+        >
+          L’indiensablepours’apprêter <span class="d-block">au quotidien</span>
+        </h1>
+        <div>
+          <img class="image-center d-flex" id="images" src="" alt="image" />
+        </div>
+
+        <div class="d-flex gap-10 position-image-absolute">
+          <img
+            class="pointer-cursour circle w-40 change1"
+            id="change1"
+            src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830412549697607/COLOR2.png"
+            alt="small image"
+          />
+          <img
+            class="pointer-cursour circle w-40"
+            id="change2"
+            src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830412235120731/COLOR1.png"
+            alt="small image"
+          />
+          <img
+            class="pointer-cursour circle w-40"
+            id="change3"
+            src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830408963567668/COLOR3.png"
+            alt="small image"
+          />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row pt-40 justify-contnet-between">
+          <div class="col-5 col-md-12">
+            <div>
+              <h3 class="fs-25 ff_poppin fw-bold">
+                Joysticks et pavé tactile haute précision.
+              </h3>
+              <p class="ff_poppin fw-normal mt-10 fs-16">
+                Grâce au pavé tactile, aux joysticks analogique et aux gâchettes
+                plus précise. Obtenez un meilleur contrôle en jeu et une
+                précision inégalable. Ajoutezà cela des détecteurs de mouvement
+                avancées, plus sensible et précis qu' aucune autre manette, elle
+                détectera chacune de vos inclinaisons et rotations sans aucun
+                problème.
+              </p>
+            </div>
+            <img
+              class="w-100 mt-20"
+              src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830410595147776/IMG-SIMPLE.png"
+              alt=" white image"
+            />
+          </div>
+          <div class="col-5 col-md-12 mt-30-md">
+            <div>
+              <h3 class="fs-25 ff_poppin fw-bold">
+                Plus puissant qu’aucun autre sèche cheveux.
+              </h3>
+              <p class="ff_poppin fw-normal mt-10 fs-16 pb-75">
+                Grâce au pavé tactile, aux joysticks analogique et aux gâchettes
+                plus précise. Obtenez un meilleur contrôle en jeu et une
+                précision inégalable. Ajoutezà cela des détecteurs de mouvement
+              </p>
+            </div>
+            <img
+              class="w-100 mt-92"
+              src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830410595147776/IMG-SIMPLE.png"
+              alt=" white image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-black mt-50 pt-60 pb-60">
+      <div class="container">
+        <div class="bg-purple py-35 br-35">
+          <h4 class="fs-25 mw-md-200 ff_poppin text-white text-center fw-bold">
+            Tout ça réuni en un seul Dyson.
+          </h4>
+          <div class="mw-600">
+            <div class="row mt-20">
+              <div class="col-4 col-md-6">
+                <img
+                  class="small-image-width d-flex"
+                  src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830431747026954/samplew.png"
+                  alt="image"
+                />
+                <p
+                  class="ff_poppin text-center text-white fw-normal mt-10 fs-18"
+                >
+                  Haute efficacité
+                </p>
+              </div>
+              <div class="col-4 col-md-6">
+                <img
+                  class="small-image-width d-flex"
+                  src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830431747026954/samplew.png"
+                  alt="image"
+                />
+                <p
+                  class="ff_poppin text-center text-white fw-normal mt-10 fs-18"
+                >
+                  Design léger & compact
+                </p>
+              </div>
+              <div class="col-4 col-md-6 mt-30-md">
+                <img
+                  class="small-image-width d-flex"
+                  src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830431747026954/samplew.png"
+                  alt="image"
+                />
+                <p
+                  class="ff_poppin text-center text-white fw-normal mt-10 fs-18"
+                >
+                  Haute efficacité
+                </p>
+              </div>
+              <div class="col-4 col-md-6 mt-30">
+                <img
+                  class="small-image-width d-flex"
+                  src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830431747026954/samplew.png"
+                  alt="image"
+                />
+                <p
+                  class="ff_poppin text-center text-white fw-normal mt-10 fs-18"
+                >
+                  Haute efficacité
+                </p>
+              </div>
+              <div class="col-4 col-md-6 mt-30">
+                <img
+                  class="small-image-width d-flex"
+                  src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830431747026954/samplew.png"
+                  alt="image"
+                />
+                <p
+                  class="ff_poppin text-center text-white fw-normal mt-10 fs-18"
+                >
+                  Design léger & compact
+                </p>
+              </div>
+              <div class="col-4 col-md-6 mt-30">
+                <img
+                  class="small-image-width d-flex"
+                  src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830431747026954/samplew.png"
+                  alt="image"
+                />
+                <p
+                  class="ff_poppin text-center text-white fw-normal mt-10 fs-18"
+                >
+                  Haute efficacité
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-60 justify-contnet-between">
+          <div class="col-5 col-md-12">
+            <h3 class="fs-25 text-white ff_poppin fw-bold">
+              Joysticks et pavé tactile haute précision.
+            </h3>
+            <p class="ff_poppin text-white fw-normal mt-10 fs-16">
+              Grâce au pavé tactile, aux joysticks analogique et aux gâchettes
+              plus précise. Obtenez un meilleur contrôle en jeu et une précision
+              inégalable. Ajoutezà cela des détecteurs de mouvement avancées,
+              plus sensible et précis qu' aucune autre manette, elle détectera
+              chacune de vos inclinaisons et rotations sans aucun problème.
+            </p>
+            <img
+              class="w-100 mt-20"
+              src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830410595147776/IMG-SIMPLE.png"
+              alt=" white image"
+            />
+          </div>
+          <div class="col-5 col-md-12 mt-30-md">
+            <h3 class="fs-25 text-white ff_poppin fw-bold">
+              Joysticks et pavé tactile haute précision.
+            </h3>
+            <p class="ff_poppin text-white fw-normal mt-10 fs-16">
+              Grâce au pavé tactile, aux joysticks analogique et aux gâchettes
+              plus précise. Obtenez un meilleur contrôle en jeu et une précision
+              inégalable. Ajoutezà cela des détecteurs de mouvement avancées,
+              plus sensible et précis qu' aucune autre manette, elle détectera
+              chacune de vos inclinaisons et rotations sans aucun problème.
+            </p>
+            <img
+              class="w-100 mt-20"
+              src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830410595147776/IMG-SIMPLE.png"
+              alt=" white image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pb-60">
+      <div class="container">
+        <h2 class="ff_poppin fw-bold fs-30 text-center pt-40">
+          Découvrez nos autres <span class="d-block">produits</span>
+        </h2>
+        <div class="mt-30 slider">
+          <div>
+            <img
+              class="slider-image-center d-flex"
+              src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830431512137809/PRODUCT.jpg"
+              alt=""
+            />
+            <h2 class="py-10 ff_poppin fw-bold fs-20 text-center mt-10">
+              Dyson Supersonic
+            </h2>
+            <div
+              class="d-flex gap-10 align-items-center justify-contnet-center"
+            >
+              <h3
+                class="ff_poppin fw-medium text-decoration-center fs-18 text-center mt-10"
+              >
+                279,90€
+              </h3>
+              <h3 class="ff_poppin fw-bold fs-18 text-center text-purple mt-10">
+                159,90€
+              </h3>
+            </div>
+            <div class="d-flex justify-contnet-center mt-15">
+              <button
+                class="ff_poppin fw-bold fs-18 bg-purple border-0 btn-edit b-radius-rounded text-white"
+              >
+                Découvrir
+              </button>
+            </div>
+          </div>
+          <div>
+            <img
+              class="slider-image-center d-flex"
+              src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830431512137809/PRODUCT.jpg"
+              alt=""
+            />
+            <h2 class="py-10 ff_poppin fw-bold fs-20 text-center mt-10">
+              Dyson Supersonic
+            </h2>
+            <div
+              class="d-flex gap-10 align-items-center justify-contnet-center"
+            >
+              <h3
+                class="ff_poppin fw-medium text-decoration-center fs-18 text-center mt-10"
+              >
+                279,90€
+              </h3>
+              <h3 class="ff_poppin fw-bold fs-18 text-center text-purple mt-10">
+                159,90€
+              </h3>
+            </div>
+            <div class="d-flex justify-contnet-center mt-15">
+              <button
+                class="ff_poppin fw-bold fs-18 bg-purple border-0 btn-edit b-radius-rounded text-white"
+              >
+                Découvrir
+              </button>
+            </div>
+          </div>
+          <div>
+            <img
+              class="slider-image-center d-flex"
+              src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830431512137809/PRODUCT.jpg"
+              alt=""
+            />
+            <h2 class="py-10 ff_poppin fw-bold fs-20 text-center mt-10">
+              Dyson Supersonic
+            </h2>
+            <div
+              class="d-flex gap-10 align-items-center justify-contnet-center"
+            >
+              <h3
+                class="ff_poppin fw-medium text-decoration-center fs-18 text-center mt-10"
+              >
+                279,90€
+              </h3>
+              <h3 class="ff_poppin fw-bold fs-18 text-center text-purple mt-10">
+                159,90€
+              </h3>
+            </div>
+            <div class="d-flex justify-contnet-center mt-15">
+              <button
+                class="ff_poppin fw-bold fs-18 bg-purple border-0 btn-edit b-radius-rounded text-white"
+              >
+                Découvrir
+              </button>
+            </div>
+          </div>
+          <div>
+            <img
+              class="slider-image-center d-flex"
+              src="https://cdn.discordapp.com/attachments/1151828801391710349/1151830431512137809/PRODUCT.jpg"
+              alt=""
+            />
+            <h2 class="py-10 ff_poppin fw-bold fs-20 text-center mt-10">
+              Dyson Supersonic
+            </h2>
+            <div
+              class="d-flex gap-10 align-items-center justify-contnet-center"
+            >
+              <h3
+                class="ff_poppin fw-medium text-decoration-center fs-18 text-center mt-10"
+              >
+                279,90€
+              </h3>
+              <h3 class="ff_poppin fw-bold fs-18 text-center text-purple mt-10">
+                159,90€
+              </h3>
+            </div>
+            <div class="d-flex justify-contnet-center mt-15">
+              <button
+                class="ff_poppin fw-bold fs-18 bg-purple border-0 btn-edit b-radius-rounded text-white"
+              >
+                Découvrir
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".slider").slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
+          },
+        ],
+      });
+
+      let imgs = document.getElementById("images");
+      let change1 = document.getElementById("change1");
+      let change2 = document.getElementById("change2");
+      let change3 = document.getElementById("change3");
+
+      change1.addEventListener("click", () => {
+        imgs.src =
+          "https://cdn.discordapp.com/attachments/1151828801391710349/1151830411283013683/PRINCIPALE.png";
+      });
+      change2.addEventListener("click", () => {
+        imgs.src =
+          "https://cdn.discordapp.com/attachments/1151828801391710349/1151830411928932402/PRINCIPALE3.png";
+      });
+      change3.addEventListener("click", () => {
+        imgs.src =
+          "https://cdn.discordapp.com/attachments/1151828801391710349/1151830411610173521/PRINCIPALE2.png";
+      });
+      document.body.querySelector(".change1").click();
+    </script>
+    >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(".circle").click(function (e) {
+        $(".circle").removeClass("active");
+        $(this).addClass("active");
+      });
+    </script>
+  </body>
+</html> -->
